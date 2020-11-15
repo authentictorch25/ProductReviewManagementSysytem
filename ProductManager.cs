@@ -22,5 +22,15 @@ namespace ProductReviewSystem
                 Console.WriteLine($"ProductID:{v.ProductID}\tUserID:{v.UserID}\tRating:{v.Rating}\tReview:{v.Review}\tIsLike:{v.IsLike}");
             }
         }
+
+        public static void GetRecordsWithRatingGreaterThanThree(List<ProductReview> productList)
+        {
+            var data = productList.Where(r => r.Rating > 3 && (r.ProductID == 1 || r.ProductID == 4 || r.ProductID == 9)).ToList();
+            Console.WriteLine("\nProducts with rating greater than 3 and id=1 or 4 or 9 are:");
+            foreach (var v in data)
+            {
+                Console.WriteLine($"ProductID:{v.ProductID}\tUserID:{v.UserID}\tRating:{v.Rating}\tReview:{v.Review}\tIsLike:{v.IsLike}");
+            }
+        }
     }
 }

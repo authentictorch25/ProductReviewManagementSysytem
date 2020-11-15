@@ -30,6 +30,8 @@ namespace ProductReviewSystem
 
             //UC 2
             ProductManager.GetTopThreeHighRatedproducts(productReviewList);
+            //UC 3
+            ProductManager.GetRecordsWithRatingGreaterThanThree(productReviewList);
             Console.ReadLine();
         }
     }
