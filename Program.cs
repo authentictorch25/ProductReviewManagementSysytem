@@ -44,6 +44,8 @@ namespace ProductReviewSystem
             ProductReviewDataTable.AddDataIntoDataTable();
             //UC 9
             ProductReviewDataTable.GetAllRecordsWhoseIsLikeIsTrue();
+            //UC 10
+            ProductReviewDataTable.AverageRatingForEachProductId();
         }
     }
 }
