@@ -38,6 +38,8 @@ namespace ProductReviewSystem
             ProductManager.GetProductIDAndReviewOfAllRecords(productReviewList);
             //UC 6
             ProductManager.SkipTopFiveRecordsAndDisplayOthers(productReviewList);
+            //UC 7
+            ProductManager.GetOnlyProductIDAndReviewOfAllRecordsUsingSelect(productReviewList);
         }
     }
 }
