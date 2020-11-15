@@ -40,5 +40,19 @@ namespace ProductReviewSystem
                 Console.WriteLine($"ProductID:{v.Field<int>("ProductId")}\tUserID:{v.Field<int>("UserId")}\tRating:{v.Field<double>("Rating")}\tReview:{v.Field<string>("Review")}\tIsLike:{v.Field<bool>("IsLike")}");
             }
         }
+        /// <summary>
+        /// Gets all records whose is like is true.
+        /// </summary>
+        public static void GetAllRecordsWhoseIsLikeIsTrue()
+        {
+            var data = from records in productDataTable.AsEnumerable()
+                       where (records.Field<bool>("IsLike") == true)
+                       select records;
+            Console.WriteLine("\nRecords in table whose IsLike value is true:");
+            foreach (var v in data)
+            {
+                Console.WriteLine($"ProductID:{v.Field<int>("ProductId")}\tUserID:{v.Field<int>("UserId")}\tRating:{v.Field<double>("Rating")}\tReview:{v.Field<string>("Review")}\tIsLike:{v.Field<bool>("IsLike")}");
+            }
+        }
     }
 }
