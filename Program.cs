@@ -27,7 +27,10 @@ namespace ProductReviewSystem
             {
                 Console.WriteLine($"ProductID:{v.ProductID}\tUserID:{v.UserID}\tRating:{v.Rating}\tReview:{v.Review}\tIsLike:{v.IsLike}");
             }
+
+            //UC 2
+            ProductManager.GetTopThreeHighRatedproducts(productReviewList);
+            Console.ReadLine();
         }
-    }
     }
 }
