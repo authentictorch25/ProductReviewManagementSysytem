@@ -34,6 +34,8 @@ namespace ProductReviewSystem
             ProductManager.GetRecordsWithRatingGreaterThanThree(productReviewList);
             //UC 4
             ProductManager.GetCountOfReviewsForEachProductID(productReviewList);
+            //UC 5
+            ProductManager.GetProductIDAndReviewOfAllRecords(productReviewList);
         }
     }
 }
