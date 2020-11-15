@@ -36,6 +36,8 @@ namespace ProductReviewSystem
             ProductManager.GetCountOfReviewsForEachProductID(productReviewList);
             //UC 5
             ProductManager.GetProductIDAndReviewOfAllRecords(productReviewList);
+            //UC 6
+            ProductManager.SkipTopFiveRecordsAndDisplayOthers(productReviewList);
         }
     }
 }

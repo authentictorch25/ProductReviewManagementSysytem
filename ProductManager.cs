@@ -50,5 +50,33 @@ namespace ProductReviewSystem
                 Console.WriteLine($"ProductID:{v.ProductID},ReviewCount:{v.Count}");
             }
         }
+        /// <summary>
+        /// Gets the product identifier and review of all records.
+        /// </summary>
+        /// <param name="productList">The product list.</param>
+        public static void GetProductIDAndReviewOfAllRecords(List<ProductReview> productList)
+        {
+            var data = (from products in productList
+                        select new { ProductId = products.ProductID, Review = products.Review });
+            Console.WriteLine("\nProductId and its review:");
+            foreach (var v in data)
+            {
+                Console.WriteLine($"ProductID:{v.ProductId},ReviewCount:{v.Review}");
+            }
+        }
+        /// <summary>
+        /// Skips the top five records and display others.
+        /// </summary>
+        /// <param name="productList">The product list.</param>
+        public static void SkipTopFiveRecordsAndDisplayOthers(List<ProductReview> productList)
+        {
+            var data = (from products in productList
+                        select products).Skip(5);
+            Console.WriteLine("\nSkip top 5 records and display others:");
+            foreach (var v in data)
+            {
+                Console.WriteLine($"ProductID:{v.ProductID}\tUserID:{v.UserID}\tRating:{v.Rating}\tReview:{v.Review}\tIsLike:{v.IsLike}");
+            }
+        }
     }
 }
