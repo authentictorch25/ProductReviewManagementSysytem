@@ -42,6 +42,8 @@ namespace ProductReviewSystem
             ProductManager.GetOnlyProductIDAndReviewOfAllRecordsUsingSelect(productReviewList);
             //UC 8
             ProductReviewDataTable.AddDataIntoDataTable();
+            //UC 9
+            ProductReviewDataTable.GetAllRecordsWhoseIsLikeIsTrue();
         }
     }
 }
