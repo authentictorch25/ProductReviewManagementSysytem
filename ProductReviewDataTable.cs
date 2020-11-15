@@ -79,5 +79,20 @@ namespace ProductReviewSystem
                 Console.WriteLine($"ProductID:{v.Field<int>("ProductId")}\tUserID:{v.Field<int>("UserId")}\tRating:{v.Field<double>("Rating")}\tReview:{v.Field<string>("Review")}\tIsLike:{v.Field<bool>("IsLike")}");
             }
         }
+        /// <summary>
+        /// Gets the records for given user identifier sorted by rating.
+        /// </summary>
+        public static void GetRecordsForGivenUserIdSortedByRating()
+        {
+            var data = from records in productDataTable.AsEnumerable()
+                       where (records.Field<int>("UserId") == 10)
+                       orderby records.Field<double>("Rating") descending
+                       select records;
+            Console.WriteLine("\nSorted by rating records with userId=10:");
+            foreach (var v in data)
+            {
+                Console.WriteLine($"ProductID:{v.Field<int>("ProductId")}\tUserID:{v.Field<int>("UserId")}\tRating:{v.Field<double>("Rating")}\tReview:{v.Field<string>("Review")}\tIsLike:{v.Field<bool>("IsLike")}");
+            }
+        }
     }
 }

@@ -48,6 +48,8 @@ namespace ProductReviewSystem
             ProductReviewDataTable.AverageRatingForEachProductId();
             //UC 11
             ProductReviewDataTable.GetRecordsWithParticularReviewMessage();
+            //UC 12
+            ProductReviewDataTable.GetRecordsForGivenUserIdSortedByRating();
         }
     }
 }
